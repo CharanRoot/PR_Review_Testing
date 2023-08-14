@@ -14,7 +14,6 @@ function mkdtemp(prefix, options, callback) {
 
   validateString(prefix, 'prefix');
   nullCheck(prefix, 'prefix');
-  prefix = getValidatedPath(prefix, 'prefix');
   warnOnNonPortableTemplate(prefix);
   const req = new FSReqCallback();
   req.oncomplete = callback;
